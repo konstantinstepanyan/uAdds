@@ -52,10 +52,31 @@
     width: 7px;
 }
 
+@media screen and (max-width: 550px) {
+    .header {
+        width: 92%;
+    }
+
+    .header .header__btn-wrapper {
+        width: 110px;
+    }
+
+    .header .btn_download,
+    .header .btn_columns {
+        padding: 0;
+        width: 40%;
+    }
+
+    .header .btn-columns__img-wrapper,
+    .header .btn-columns__img-wrapper {
+        height: 35%;
+    }
+}
+
 @media screen and (max-width: 450px) {
 
-    .btn_download,
-    .btn_columns {
+    .header .btn_download,
+    .header .btn_columns {
         height: 29px;
     }
 
