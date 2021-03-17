@@ -64,6 +64,10 @@
     padding: 0;
 }
 
+.table__desc {
+    grid-area: table__desc;
+}
+
 .table .table__item .content-container {
     display: grid;
     grid-template-areas: 'table__circle table__title';
@@ -81,12 +85,119 @@
     text-align: left !important;
 }
 
-.table__desc {
-    grid-area: table__desc;
+
+
+.table__item_twin {
+    display: none;
 }
 
 @media screen and (max-width: 1300px) {
     .table {
         grid-auto-rows: 70px;
+    }
+}
+
+
+/* ЭТОГО БЛОКА CSS-кода не будет, потому что JS будет проходить циклом по пунктам таблицы и создавать их клоны, каждого пункта по столько клонов, сколько строк (не считая самой первой, собственно, с самими пунктами таблицы), было в десктопной версии и для каждого созданного двойника JS будет задавать grid-area: названиеПунктаТаблицы_twin_номерСтроки. А для блока .table JS будет перезаписывать свойство grid-template-areas вот таким образом: */
+/*
+     grid-template-areas:
+            'sources auto'
+            'clicks auto'
+            'shows auto'
+            'conversion-price auto'
+            'price auto'
+            'conversion auto'
+            'sales auto'
+            'sources_twin_1 auto'
+            'clicks_twin_1 auto'
+            'shows_twin_1 auto'
+            'conversion-price_twin1 auto'
+            'price_twin_1 auto'
+            'conversion_twin_1 auto'
+            'sales_twin_1 auto';
+*/
+/* Javascript будет дублировать первые 7 строк в кавычках из grid-template-areas для каждой новой страницы с приставкой _twin_номерСтроки. И это будет происходить для каждой строки (не считая самой первой с названиями пунктов таблицы). Это всё нужно для того, чтобы в таблицу можно было засунуть сколько угодно строчек и не столкнуться с некорректной работой css.
+Лучше всего таблица будет выглядеть как на моём макете в src/assets/макет-таблицы-для-мобилок,
+т.е. надо дублировать пункты таблицы для каждой ячейки таблицы.
+Это единственный вариант иметь красивый И упорядоченный вид на маленьких экранах.
+Другие варианты адаптации таблицы для небольших экранов смотрятся гораздо хуже.
+*/
+
+.sources_twin_1{
+    grid-area: sources_twin_1 !important;
+}
+.clicks_twin_1{
+    grid-area: clicks_twin_1 !important;
+}
+.shows_twin_1{
+    grid-area: shows_twin_1 !important;
+}
+.conversion-price_twin_1{
+    grid-area: conversion-price_twin_1 !important;
+}
+.price_twin_1{
+    grid-area: price_twin_1 !important;
+}
+.conversion_twin_1{
+    grid-area: conversion_twin_1 !important;
+}
+.sales_twin_1{
+    grid-area: sales_twin_1 !important;
+}
+/* Этого блока css-кода выше в будущем не будет*/
+
+
+
+@media screen and (max-width: 768px) {
+    .table {
+        grid-template-areas:
+            'sources auto'
+            'clicks auto'
+            'shows auto'
+            'conversion-price auto'
+            'price auto'
+            'conversion auto'
+            'sales auto'
+            'sources_twin_1 auto'
+            'clicks_twin_1 auto'
+            'shows_twin_1 auto'
+            'conversion-price_twin_1 auto'
+            'price_twin_1 auto'
+            'conversion_twin_1 auto'
+            'sales_twin_1 auto';
+        grid-template-columns: 1fr 1fr;
+        
+        
+        overflow: hidden;
+    }
+
+    .table .table__item {
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+        
+        outline: none;
+        border: 1px solid #A2A2A2 !important;
+    }
+
+    .table .table__article .table__p{
+        padding-left: 30px;
+        text-align: left;
+    }
+    
+    .table .table__article .content-container{
+        padding-left: 45px;
+    }
+
+    .table .table__item .content-container {
+        width: 100%;
+    }
+
+    .table .table__item_twin {
+        display: grid;
+    }
+
+    .table .service-title .content-container {
+        width: 80%;
     }
 }
