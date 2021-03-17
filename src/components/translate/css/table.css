@@ -1,0 +1,66 @@
+.table {
+    /*     margin-top: 20px; */
+    display: grid;
+    grid-template-areas: 'sources clicks shows conversion-price price conversion sales';
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 50px;
+    align-items: center;
+    background: #A2A2A2;
+    overflow-x: hidden;
+
+    /* el style*/
+    margin-top: 20px;
+}
+
+.sources {
+    grid-area: sources;
+    border: 2px solid #A2A2A2;
+    position: relative;
+    left: -2px;
+    z-index: 1;
+}
+
+.clicks {
+    grid-area: clicks;
+}
+
+.shows {
+    grid-area: shows;
+}
+
+.conversion-price {
+    grid-area: conversion-price;
+}
+
+.price {
+    grid-area: price;
+}
+
+.conversion {
+    grid-area: conversion;
+}
+
+.sales {
+    grid-area: sales;
+}
+
+.table__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    height: 93%;
+    width: 99%;
+    margin: 0 !important;
+}
+
+.table__item:last-child {
+    width: 100%;
+    margin-left: 1px !important;
+}
+
+.table__title,
+.table__p {
+    margin: 0;
+    padding: 0;
+}

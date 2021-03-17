@@ -1,0 +1,59 @@
+.content-wrapper {
+    display: grid;
+    grid-template-columns: minmax(160px, 1.5fr) 10.5fr;
+    max-width: 100%;
+    position: relative;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SF-Pro';
+    font-size: 10px;
+}
+
+.btn {
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all .2s linear;
+    font-size: 1.4rem;
+}
+
+.text_grey {
+    color: #929498;
+}
+
+.text_sf-pro {
+    font-family: 'SF-Pro';
+}
+
+@media screen and (max-width: 450px) {
+
+    html,
+    body {
+        font-size: 7px;
+    }
+
+    .content-wrapper {
+        grid-template-columns: minmax(125px, 1.5fr) 10.5fr;
+        max-width: 100%;
+    }
+}

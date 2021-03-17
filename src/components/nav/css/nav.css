@@ -1,0 +1,29 @@
+.nav {
+    background: #5F6368;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 61px;
+    padding: 0 20px;
+    font-size: 1.5rem;
+}
+
+.data-range{
+    color: #A2A2A2;
+}
+
+.data{
+    color: #fff;
+    border-bottom: 1px solid #A2A2A2;
+}
+
+.data__img{
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 650px){
+    .nav{
+        font-size: 1.35rem;
+    }
+}
