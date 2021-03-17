@@ -10,6 +10,9 @@ export default class Table extends Component {
     <section className="table">
         <div className="table__item sources border-top_grey">
             <div className="content-container">
+                <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+                    <circle cx="9.5" cy="9.65918" r="9.5" fill="#C4C4C4"/>
+                </svg>
                 <h4 className="table__title">Источники</h4>
             </div>
         </div>
@@ -45,6 +48,9 @@ export default class Table extends Component {
         
         <div className="table__item service-title yandex border-top_grey">
             <div className="content-container">
+                <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+                    <circle cx="9.5" cy="9.57959" r="9.5" fill="#00B355"/>
+                </svg>
                 <span className="table__p color_blue">Yandex</span>
                 <span className="table__desc color_grey">Yandex letai-266319-enc0</span>
             </div>
@@ -79,6 +85,9 @@ export default class Table extends Component {
         
         <div className="table__item service-title google-ads">
             <div className="content-container">
+                <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
+                    <circle cx="9.5" cy="9.57959" r="9.5" fill="#C72323"/>
+                </svg>
                 <span className="table__p color_blue">Google Ads</span>
                 <span className="table__desc color_grey">146-362-7099</span>
             </div>

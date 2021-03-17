@@ -13,7 +13,9 @@ export default class Header extends Component {
                 <h4 className="title header__title">Источники</h4>
                 <div className="header__btn-wrapper">
                 <button className="btn btn_download">
-                    <img className="btn__img" src={downloadSVG} />
+                    <div className="btn-columns__img-wrapper">
+                        <img className="btn__img" src={downloadSVG} />
+                    </div>
                     <span className="btn_text color_grey">Скачать</span>
                 </button>
                 <button className="btn btn_columns">
