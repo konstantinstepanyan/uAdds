@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/uAdds/static/css/main.66ee0674.chunk.css",
+    "main.css": "/uAdds/static/css/main.c3f1d561.chunk.css",
     "main.js": "/uAdds/static/js/main.e06780fb.chunk.js",
     "main.js.map": "/uAdds/static/js/main.e06780fb.chunk.js.map",
     "runtime-main.js": "/uAdds/static/js/runtime-main.1c897aea.js",
@@ -10,7 +10,7 @@
     "static/js/3.b2f1f69d.chunk.js": "/uAdds/static/js/3.b2f1f69d.chunk.js",
     "static/js/3.b2f1f69d.chunk.js.map": "/uAdds/static/js/3.b2f1f69d.chunk.js.map",
     "index.html": "/uAdds/index.html",
-    "static/css/main.66ee0674.chunk.css.map": "/uAdds/static/css/main.66ee0674.chunk.css.map",
+    "static/css/main.c3f1d561.chunk.css.map": "/uAdds/static/css/main.c3f1d561.chunk.css.map",
     "static/js/2.46976457.chunk.js.LICENSE.txt": "/uAdds/static/js/2.46976457.chunk.js.LICENSE.txt",
     "static/media/download.50308752.svg": "/uAdds/static/media/download.50308752.svg",
     "static/media/logo.c0306d75.svg": "/uAdds/static/media/logo.c0306d75.svg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.1c897aea.js",
     "static/js/2.46976457.chunk.js",
-    "static/css/main.66ee0674.chunk.css",
+    "static/css/main.c3f1d561.chunk.css",
     "static/js/main.e06780fb.chunk.js"
   ]
 }
