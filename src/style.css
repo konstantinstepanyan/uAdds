@@ -36,12 +36,20 @@ code {
     font-size: 1.4rem;
 }
 
-.text_grey {
+.color_grey {
     color: #929498;
 }
 
 .text_sf-pro {
     font-family: 'SF-Pro';
+}
+
+.color_blue{
+    color: #4377DE;
+}
+
+.border-top_grey{
+    border-top: 1px solid #A2A2A2 !important;
 }
 
 @media screen and (max-width: 450px) {

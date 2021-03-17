@@ -14,7 +14,7 @@ export default class Header extends Component {
                 <div className="header__btn-wrapper">
                 <button className="btn btn_download">
                     <img className="btn__img" src={downloadSVG} />
-                    <span className="btn_text text_grey">Скачать</span>
+                    <span className="btn_text color_grey">Скачать</span>
                 </button>
                 <button className="btn btn_columns">
                 <div className="btn-columns__img-wrapper">
@@ -22,7 +22,7 @@ export default class Header extends Component {
                     <img className="btn__img" src={rectSVG} />
                     <img className="btn__img" src={rectSVG} />
                 </div>
-                <span className="btn_text text_grey">Столбцы</span>
+                <span className="btn_text color_grey">Столбцы</span>
             </button>
         </div>
 
