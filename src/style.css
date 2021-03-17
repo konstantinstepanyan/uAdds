@@ -7,6 +7,10 @@
 
 /* //FONTS */
 
+html, body, #root, .App, .content-wrapper{
+    height: 100% !important;
+}
+
 
 html,
 body {
@@ -44,11 +48,11 @@ code {
     font-family: 'SF-Pro';
 }
 
-.color_blue{
+.color_blue {
     color: #4377DE;
 }
 
-.border-top_grey{
+.border-top_grey {
     border-top: 1px solid #A2A2A2 !important;
 }
 
@@ -64,3 +68,7 @@ code {
         max-width: 100%;
     }
 }
+
+
+
+
