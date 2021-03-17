@@ -81,6 +81,12 @@
     text-align: left !important;
 }
 
-.table__desc{
+.table__desc {
     grid-area: table__desc;
+}
+
+@media screen and (max-width: 1300px) {
+    .table {
+        grid-auto-rows: 70px;
+    }
 }
