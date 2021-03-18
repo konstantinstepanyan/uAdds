@@ -3,7 +3,7 @@ import './css/header.css';
 import downloadSVG from './img/download.svg';
 import rectSVG from './img/rect.svg';
 
-export default class Header extends Component {
+export default class TableHeader extends Component {
 
   render() {
     return(

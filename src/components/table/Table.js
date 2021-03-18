@@ -4,6 +4,12 @@ import arrowDown from './img/arrow.svg';
 
 export default class Table extends Component {
 
+  constructor(props) {
+    super(props);
+    
+  }
+    
+    
   render() {
     return(
         

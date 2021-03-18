@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import Nav from './components/nav/Nav';
 import Menu from './components/menu/Menu';
-import Header from './components/header/Header';
+import TableHeader from './components/tableHeader/TableHeader';
+import DealingsHeader from './components/dealingsHeader/DealingsHeader';
 import Table from './components/table/Table';
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
       <main className="content-wrapper"> 
             <Menu />
         <div className="options-wrapper">
-            <Header />
+            <TableHeader />
+            <DealingsHeader />
             <Table />
         </div>
       </main>
