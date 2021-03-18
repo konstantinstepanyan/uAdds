@@ -8,6 +8,7 @@
 	 grid-template-columns: 1fr 1fr 0.1fr 1fr 1fr 0.1fr 0.7fr 0.2fr;
 	 max-width: 95%;
 	 margin: auto !important;
+     font-family: 'Roboto-Regular';
 }
  .settings {
 	 grid-area: settings;
@@ -15,6 +16,7 @@
  .funnel-name {
 	 position: relative;
 	 grid-area: funnel-name;
+     font-size: 1.5rem;
 }
  .funnel-name__img {
 	 position: absolute;
@@ -44,6 +46,7 @@
 	 grid-area: search-wrapper;
 }
  .search-wrapper__input {
+     color: #c5c5c5;
 	 max-width: 135px;
      border: none !important;
 }
@@ -136,13 +139,7 @@
  .sep_2 {
 	 grid-area: sep_2;
 }
-/* GLOBAL CLASSES */
- .color_grey {
-	 color: #c5c5c5;
-}
- .text_no-br {
-	 white-space: nowrap;
-}
+
  @media screen and (max-width: 1000px) {
 	 .dealings-header {
 		 grid-template-areas: 'funnel-name filter' 'search-wrapper dealings' 'new-deal-wrapper settings';

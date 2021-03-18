@@ -38,11 +38,11 @@ export default class DealingsHeader extends Component {
 
         <div className="dealings-header__item search-wrapper">
             <img className="search-wrapper__img" src={magnifier} />
-            <input className="search-wrapper__input color_grey" type="text" placeholder="Поиск и фильтр" />
+            <input className="search-wrapper__input color_light-grey" type="text" placeholder="Поиск и фильтр" />
         </div>
 
         <div className="dealings-header__item dealings">
-            <span className="dealings__count color_grey text_no-br">23 сделки:&ensp;</span>
+            <span className="dealings__count color_light-grey text_no-br">23 сделки:&ensp;</span>
             <span className="dealings__price text_no-br"> 19290 р.</span>
         </div>
 
