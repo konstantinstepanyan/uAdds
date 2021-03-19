@@ -50,6 +50,23 @@ export default class App extends Component {
   }
     
   render(){
+      let header, 
+          dealingsHeader,
+          dealings,
+          table;
+      if(this.state.headerTitle == 'Сделки'){
+          header = '';
+          dealingsHeader = <DealingsHeader />
+          dealings = <Dealings />;
+          table = '';
+      }
+      else{
+          header = <TableHeader headerTitle={this.state.headerTitle}/>
+          dealingsHeader = '';
+          dealings = '';
+          table = <Table tableTitle={this.state.headerTitle}/>;
+      }
+      
           return (
             <div className="App">
               <Nav />
@@ -57,10 +74,12 @@ export default class App extends Component {
               <main className="content-wrapper"> 
                     <Menu />
                 <div className="options-wrapper">
-                    <TableHeader headerTitle={this.state.headerTitle}/>
-                    <DealingsHeader />
-                    <Dealings />
-                    <Table />
+              
+                    {header}
+                    {dealingsHeader}
+                    {dealings}
+                    
+                    {table}
                 </div>
               </main>
             </div>
