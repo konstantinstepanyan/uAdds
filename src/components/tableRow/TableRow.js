@@ -29,7 +29,7 @@ export default class TableRow extends Component {
   }
     
   render() {      
-     const {serviceTitle, serviceTitleDesc, 
+     const {circleColor, serviceTitle, serviceTitleDesc, 
             clicksCount, showsCount, 
             conversionPriceCount, priceCount, 
             conversionCount, salesCount} = this.props;
@@ -40,7 +40,7 @@ export default class TableRow extends Component {
             <div className="table__item service-title yandex border-top_grey">
                     <div className="content-container">
                         <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-                            <circle cx="9.5" cy="9.57959" r="9.5" fill="#00B355"/>
+                            <circle cx="9.5" cy="9.57959" r="9.5" fill={circleColor}/>
                         </svg>
                         <span className="table__p color_blue">{serviceTitle} </span>
                         <span className="table__desc color_grey">{serviceTitleDesc} </span>

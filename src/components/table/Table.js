@@ -59,7 +59,7 @@ export default class Table extends Component {
         
         <TableRow serviceTitle="Yandex" serviceTitleDesc="Yandex letai-266319-enc0" clicksCount="852" 
         showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
-        salesCount="10" />
+        salesCount="10" circleColor="#00B355"/>
         
         
         
@@ -100,7 +100,7 @@ export default class Table extends Component {
         
         <TableRow serviceTitle="GoogleAds" serviceTitleDesc="146-362-7099" clicksCount="900" 
         showsCount="18000" conversionPriceCount="931 ₽" priceCount="186200" conversionCount="200"
-        salesCount="40" />
+        salesCount="40" circleColor="#f00"/>
         
         
         
