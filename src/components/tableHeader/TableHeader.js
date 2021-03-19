@@ -6,11 +6,13 @@ import rectSVG from './img/rect.svg';
 export default class TableHeader extends Component {
 
   render() {
+      const {headerTitle} = this.props;
+      
     return(
 
         
     <header className="header">
-                <h4 className="title header__title">Источники</h4>
+                <h4 className="title header__title">{headerTitle}</h4>
                 <div className="header__btn-wrapper">
                 <button className="btn btn_download">
                     <div className="btn-columns__img-wrapper">

@@ -13,7 +13,7 @@ export default class App extends Component {
     
     constructor(props){
       super(props);
-      this.state = {activeMenuItem: 'item_sources'};
+      this.state = {activeMenuItem: 'item_sources', headerTitle: 'Источники'};
   }    
     
     componentDidMount() {
@@ -39,7 +39,10 @@ export default class App extends Component {
           i.classList.remove('item_active');
           if(i.getAttribute('data-id') == selectedMenuItem){
               this.setState({
-                  activeMenuItem: selectedMenuItem
+                  activeMenuItem: selectedMenuItem,
+                  headerTitle: i.textContent
+              }, () => {
+                  console.log(`this.state.activeMenuItem: ${this.state.activeMenuItem}; this.state.headerTitle: ${this.state.headerTitle}`)
               });
               i.classList.add('item_active');
           }
@@ -54,7 +57,7 @@ export default class App extends Component {
               <main className="content-wrapper"> 
                     <Menu />
                 <div className="options-wrapper">
-                    <TableHeader />
+                    <TableHeader headerTitle={this.state.headerTitle}/>
                     <DealingsHeader />
                     <Dealings />
                     <Table />
