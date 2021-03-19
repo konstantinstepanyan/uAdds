@@ -1,5 +1,6 @@
 .table {
     /*     margin-top: 20px; */
+    overflow: hidden;
     display: grid;
     grid-template-areas: 'sources clicks shows conversion-price price conversion sales';
     grid-auto-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;

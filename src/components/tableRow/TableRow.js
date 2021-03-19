@@ -4,6 +4,8 @@ export default class TableRow extends Component {
 
   constructor(props) {
       super(props);
+      
+     
   }
     
     
@@ -15,16 +17,23 @@ export default class TableRow extends Component {
       for(let i of unwantedDivs){
 
           //unwantedDIV = i
-          console.log(i.childNodes.length);
+          const unwantedDivChildrenCount = parseInt(i.childNodes.length, 10);
+
           
-          for (var z = 0; z < 7; z++) {
+          for (var z = 0; z < unwantedDivChildrenCount; z++) {
               i.before(i.firstChild);
           }
-          
+            i.remove();   
       }
+      
   }
     
   render() {      
+     const {serviceTitle, serviceTitleDesc, 
+            clicksCount, showsCount, 
+            conversionPriceCount, priceCount, 
+            conversionCount, salesCount} = this.props;
+      
     return(
         
         <div className="unwanted">
@@ -33,33 +42,33 @@ export default class TableRow extends Component {
                         <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
                             <circle cx="9.5" cy="9.57959" r="9.5" fill="#00B355"/>
                         </svg>
-                        <span className="table__p color_blue">Yandex</span>
-                        <span className="table__desc color_grey">Yandex letai-266319-enc0</span>
+                        <span className="table__p color_blue">{serviceTitle} </span>
+                        <span className="table__desc color_grey">{serviceTitleDesc} </span>
                     </div>
                 </div>
 
                 <div className="table__item clicks-count border-top_grey">
-                    <span className="table__p">852</span>
+                    <span className="table__p">{clicksCount}</span>
                 </div>
 
                 <div className="table__item shows-count border-top_grey">
-                    <span className="table__p">8520</span>
+                    <span className="table__p">{showsCount}</span>
                 </div>
 
                 <div className="table__item conversion-price-count border-top_grey">
-                    <span className="table__p">1025 ₽</span>
+                    <span className="table__p">{conversionPriceCount}</span>
                 </div>
 
                 <div className="table__item price-count border-top_grey">
-                    <span className="table__p">102500</span>
+                    <span className="table__p">{priceCount}</span>
                 </div>
 
                 <div className="table__item conversion-count border-top_grey">
-                    <span className="table__p">100</span>
+                    <span className="table__p">{conversionCount}</span>
                 </div>
 
                 <div className="table__item sales-count border-top_grey">
-                    <span className="table__p">10</span>
+                    <span className="table__p">{salesCount}</span>
                 </div>
         </div>
         
