@@ -16,6 +16,9 @@ export default class App extends Component {
       this.state = {activeMenuItem: 'item_sources', headerTitle: 'Источники'};
   }    
     
+
+   
+    
     componentDidMount() {
       //this.setState is async func
       this.setState({
@@ -43,7 +46,7 @@ export default class App extends Component {
               this.setState({
                   activeMenuItem: selectedMenuItem,
                   headerTitle: i.textContent
-              });
+              }, );
               i.classList.add('item_active');
           }
       }
@@ -66,6 +69,8 @@ export default class App extends Component {
           dealings = '';
           table = <Table tableTitle={this.state.headerTitle} activeMenuItem={this.state.activeMenuItem} />;
       }
+      console.log(this.state.headerTitle);
+      
       
           return (
             <div className="App">

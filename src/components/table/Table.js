@@ -15,10 +15,11 @@ export default class Table extends Component {
         this.checkTableTitle();
   }
     
-
+    
     
   checkTableTitle(){
-      
+
+
         switch(this.props.tableTitle){
         case ('Сделки'): 
                 this.setState({
@@ -28,8 +29,6 @@ export default class Table extends Component {
                     tableRow2: 
                     ''
                 },
-                             
-                console.log(this.state)
                 )                
           break;
                 
@@ -44,10 +43,7 @@ export default class Table extends Component {
                     <TableRow serviceTitle="GoogleAds" serviceTitleDesc="146-362-7099" clicksCount="900" 
                     showsCount="18000" conversionPriceCount="931 ₽" priceCount="186200" conversionCount="200"
                     salesCount="40" circleColor="#f00" />)
-                },
-                             
-                console.log(this.state)
-                )                
+                })                
           break;
                 
                 
@@ -63,8 +59,7 @@ export default class Table extends Component {
                salesCount="10" circleColor="#00B355" />
                 ),
                 tableRow2: ''
-            },
-            console.log(this.state)             
+            }
             );
 
           break;
@@ -80,12 +75,10 @@ export default class Table extends Component {
                 showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
                salesCount="10" circleColor="#00B355" />
                 ),
-                tableRow2: <TableRow serviceTitle="Группа2" serviceTitleDesc="" clicksCount="" 
+                tableRow2: (<TableRow serviceTitle="Группа2" serviceTitleDesc="" clicksCount="" 
                 showsCount="" conversionPriceCount="" priceCount="" conversionCount=""
-               salesCount="" circleColor="" />
-            },
-            console.log(this.state)             
-            );
+               salesCount="" circleColor="red" />)
+            });
 
           break;
                 
@@ -95,13 +88,15 @@ export default class Table extends Component {
 //                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
 //                salesCount="10" circleColor="#00B355"/>;
             this.setState({
-                tableRow1: 
-                    ''
-                ,
-                tableRow2: ''
-            },
-            console.log(this.state)             
-            );
+                tableRow1: (
+                    <TableRow serviceTitle="Ключевое слово 1" serviceTitleDesc="123" clicksCount="852" 
+                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+               salesCount="10" circleColor="#00B355" />
+                ),
+                tableRow2: (<TableRow serviceTitle="Ключевое слово 1" serviceTitleDesc="" clicksCount="" 
+                showsCount="" conversionPriceCount="" priceCount="" conversionCount=""
+               salesCount="" circleColor="red" />)
+            });
 
           break;
                 
@@ -112,12 +107,14 @@ export default class Table extends Component {
 //                salesCount="10" circleColor="#00B355"/>;
             this.setState({
                 tableRow1: (
-                    ''
+                    <TableRow serviceTitle="Объявление 1" serviceTitleDesc="123" clicksCount="852" 
+                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+               salesCount="10" circleColor="#00B355" />
                 ),
-                tableRow2: ''
-            },
-            console.log(this.state)             
-            );
+                tableRow2: (<TableRow serviceTitle="Объявление 2" serviceTitleDesc="" clicksCount="" 
+                showsCount="" conversionPriceCount="" priceCount="" conversionCount=""
+               salesCount="" circleColor="red" />)
+            });
 
           break;
               
@@ -126,9 +123,11 @@ export default class Table extends Component {
       }
     }
     
-  componentDidUpdate(prevProps){
-      let tableRow1, tableRow2;  
-      
+  componentDidMount(){
+      this.checkTableTitle();
+  }
+    
+  componentDidUpdate(prevProps){      
         if(this.props != prevProps){
             //this.removeAllTableCells();
         this.checkTableTitle();

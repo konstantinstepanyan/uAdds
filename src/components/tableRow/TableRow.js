@@ -5,43 +5,33 @@ export default class TableRow extends Component {
   constructor(props) {
       super(props);
       
-      this.state = {hide: this.props.hide, tableTitle: this.props.tableTitle}
+      this.state = {tableTitle: this.props.tableTitle}
       
       
   }
-    
-  removeAllTableCells(){
-        let allTableCells = document.querySelectorAll(':not(.unwanted) > .table__cell');
-          
-          allTableCells.forEach((item, index)=>{
-                item.remove() 
-              });
-      }
+
     
 
     
   componentDidUpdate(prevProps){
 
-      
-
-    if (this.props== prevProps && this.props.tableTitle=='') {
-            this.setState({hide: true}, () => {
-                    console.log('didUpdate this.state.hide:')
-                    console.log(this.state.hide)
-
-            })
+    if (this.props !== prevProps ) {
+        console.log('DidUpdate this.props:');
+        console.log(this.props);
     }
       
-
   }
     
-  render() {      
-     const {circleColor, hide,
+  render() {  
+      
+     const {circleColor,
             serviceTitle, serviceTitleDesc, 
             clicksCount, showsCount, 
             conversionPriceCount, priceCount, 
             conversionCount, salesCount} = this.props;
       
+      console.log('Render this.props:');
+      console.log(this.props);
       
       
       
