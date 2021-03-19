@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './css/table.css';
 import arrowDown from './img/arrow.svg';
+import TableRow from '../tableRow/TableRow.js';
+import TableRow2 from '../tableRow2/TableRow2.js';
 
 export default class Table extends Component {
 
@@ -55,42 +57,7 @@ export default class Table extends Component {
         </div>
         
         
-        
-        
-        
-        <div className="table__item service-title yandex border-top_grey">
-            <div className="content-container">
-                <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-                    <circle cx="9.5" cy="9.57959" r="9.5" fill="#00B355"/>
-                </svg>
-                <span className="table__p color_blue">Yandex</span>
-                <span className="table__desc color_grey">Yandex letai-266319-enc0</span>
-            </div>
-        </div>
-        
-        <div className="table__item clicks-count border-top_grey">
-            <span className="table__p">852</span>
-        </div>
-        
-        <div className="table__item shows-count border-top_grey">
-            <span className="table__p">8520</span>
-        </div>
-        
-        <div className="table__item conversion-price-count border-top_grey">
-            <span className="table__p">1025 ₽</span>
-        </div>
-        
-        <div className="table__item price-count border-top_grey">
-            <span className="table__p">102500</span>
-        </div>
-        
-        <div className="table__item conversion-count border-top_grey">
-            <span className="table__p">100</span>
-        </div>
-        
-        <div className="table__item sales-count border-top_grey">
-            <span className="table__p">10</span>
-        </div>
+        <TableRow />
         
         
         
@@ -130,39 +97,7 @@ export default class Table extends Component {
         
         
         
-        <div className="table__item service-title google-ads">
-            <div className="content-container">
-                <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-                    <circle cx="9.5" cy="9.57959" r="9.5" fill="#C72323"/>
-                </svg>
-                <span className="table__p color_blue">Google Ads</span>
-                <span className="table__desc color_grey">146-362-7099</span>
-            </div>
-        </div>
         
-        <div className="table__item clicks-count">
-            <span className="table__p">900</span>
-        </div>
-        
-        <div className="table__item shows-count">
-            <span className="table__p">18000</span>
-        </div>
-        
-        <div className="table__item conversion-price-count">
-            <span className="table__p">931 ₽</span>
-        </div>
-        
-        <div className="table__item price-count">
-            <span className="table__p">186200</span>
-        </div>
-        
-        <div className="table__item conversion-count">
-            <span className="table__p">200</span>
-        </div>
-        
-        <div className="table__item sales-count">
-            <span className="table__p">40</span>
-        </div>
         
         
     </section>
