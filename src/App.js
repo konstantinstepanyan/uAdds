@@ -4,6 +4,7 @@ import Nav from './components/nav/Nav';
 import Menu from './components/menu/Menu';
 import TableHeader from './components/tableHeader/TableHeader';
 import DealingsHeader from './components/dealingsHeader/DealingsHeader';
+import Dealings from './components/dealings/Dealings';
 import Table from './components/table/Table';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <div className="options-wrapper">
             <TableHeader />
             <DealingsHeader />
+            <Dealings />
             <Table />
         </div>
       </main>

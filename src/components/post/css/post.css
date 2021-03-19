@@ -1,0 +1,92 @@
+.post {
+    display: grid;
+    grid-template-areas: 'user-avatar social-network-title current-data current-data''user-avatar user-name . .''. comment comment share';
+    grid-template-columns: 0.05fr 0.85fr 0.55fr 0.1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    width: 90%;
+    margin: 30px auto 0 auto;
+    padding: 10px;
+    outline: 3px solid #ccc;
+    text-align: left;
+    font-size: 1.05rem;
+    
+    
+    
+}
+
+.post__user-avatar {
+    grid-area: user-avatar;
+    max-width: 23px;
+}
+
+.post__user-avatar_minify {
+    max-width: 15px;
+}
+
+.post__social-network-title {
+    grid-area: social-network-title;
+}
+
+.post__current-data {
+    grid-area: current-data;
+    text-align: right;
+    justify-self: end;
+}
+
+.post__user-name {
+    grid-area: user-name;
+}
+
+.post__comment {
+    grid-area: comment;
+    border-radius: 10px;
+    padding: 3px 5px;
+    background: #e5eeff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    max-width: 90%;
+}
+
+.post__share {
+    grid-area: share;
+    justify-self: end;
+}
+
+
+@media screen and (max-width: 1300px) {
+
+    /* width: 245px;
+	*/
+    .post {
+        width: 88%;
+        grid-template-areas: 'user-avatar social-network-title current-data current-data''user-name user-name user-name .''comment comment comment share';
+        grid-template-columns: 0.1fr 0.55fr 0.55fr 0.1fr;
+    }
+
+    .post__avatar {
+        max-width: 18px;
+    }
+
+    .post__current-data {
+        text-align: right;
+    }
+
+    .post__user-name {
+        justify-self: start;
+    }
+
+    .post__comment {
+        font-size: 1.1rem;
+    }
+
+    .post__user-avatar {
+        max-width: 18px;
+    }
+
+    .post__user-avatar_minify {
+        display: none;
+    }
+}

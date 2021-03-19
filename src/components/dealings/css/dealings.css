@@ -1,0 +1,45 @@
+.dealings {
+    max-width: 85%;
+    margin: 0 0 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-rows: 80px;
+	 */
+    grid-column-gap: 10px;
+    grid-row-gap: 25px;
+    /* height: 55px;
+	 */
+    font-size: 1.4rem;
+}
+
+.dealings__article {
+    text-align: center;
+}
+
+.dealings__article .dealings__title {
+    margin: 10px auto 0 auto;
+}
+
+.dealings__article .dealings__desc {
+    display: block;
+    margin-top: 5px;
+}
+
+.dealings__article_unparsed {
+    border-top: 5px solid #9a9a9a;
+}
+
+.dealings__article_wip {
+    border-top: 5px solid #ea8841;
+}
+
+.dealings__article_assembly,
+.dealings__article_realized {
+    border-top: 5px solid #2f9200;
+}
+
+@media screen and (max-width: 1300px) {
+    .dealings {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
