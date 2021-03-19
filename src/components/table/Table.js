@@ -8,13 +8,142 @@ export default class Table extends Component {
   constructor(props) {
     super(props);
     
-     
+      this.state = {
+          tableRow1: '',
+          tableRow2: ''   
+      }
+        this.checkTableTitle();
   }
+    
+
+    
+  checkTableTitle(){
+      
+        switch(this.props.tableTitle){
+        case ('Сделки'): 
+                this.setState({
+                    tableRow1: 
+                    ''
+                    ,
+                    tableRow2: 
+                    ''
+                },
+                             
+                console.log(this.state)
+                )                
+          break;
+                
+        case ('Источники'): 
+                this.setState({
+                    tableRow1: (
+                    <TableRow serviceTitle="Yandex" serviceTitleDesc="Yandex letai-266319-enc0" clicksCount="852" 
+                    showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+                    salesCount="10" circleColor="#00B355"/>
+                    ),
+                    tableRow2: (
+                    <TableRow serviceTitle="GoogleAds" serviceTitleDesc="146-362-7099" clicksCount="900" 
+                    showsCount="18000" conversionPriceCount="931 ₽" priceCount="186200" conversionCount="200"
+                    salesCount="40" circleColor="#f00" />)
+                },
+                             
+                console.log(this.state)
+                )                
+          break;
+                
+                
+          case ('Компании'):
+              
+//            tableRow1 = <TableRow serviceTitle="Аренда-Поиск-Сочи" serviceTitleDesc="123" clicksCount="852" 
+//                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+//                salesCount="10" circleColor="#00B355"/>;
+            this.setState({
+                tableRow1: (
+                    <TableRow serviceTitle="Аренда-Поиск-Сочи" serviceTitleDesc="123" clicksCount="852" 
+                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+               salesCount="10" circleColor="#00B355" />
+                ),
+                tableRow2: ''
+            },
+            console.log(this.state)             
+            );
+
+          break;
+                
+         case ('Группы'):
+              
+//            tableRow1 = <TableRow serviceTitle="Аренда-Поиск-Сочи" serviceTitleDesc="123" clicksCount="852" 
+//                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+//                salesCount="10" circleColor="#00B355"/>;
+            this.setState({
+                tableRow1: (
+                    <TableRow serviceTitle="Группа1" serviceTitleDesc="123" clicksCount="852" 
+                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+               salesCount="10" circleColor="#00B355" />
+                ),
+                tableRow2: <TableRow serviceTitle="Группа2" serviceTitleDesc="" clicksCount="" 
+                showsCount="" conversionPriceCount="" priceCount="" conversionCount=""
+               salesCount="" circleColor="" />
+            },
+            console.log(this.state)             
+            );
+
+          break;
+                
+         case ('Ключевые слова'):
+              
+//            tableRow1 = <TableRow serviceTitle="Аренда-Поиск-Сочи" serviceTitleDesc="123" clicksCount="852" 
+//                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+//                salesCount="10" circleColor="#00B355"/>;
+            this.setState({
+                tableRow1: 
+                    ''
+                ,
+                tableRow2: ''
+            },
+            console.log(this.state)             
+            );
+
+          break;
+                
+         case ('Объявления'):
+              
+//            tableRow1 = <TableRow serviceTitle="Аренда-Поиск-Сочи" serviceTitleDesc="123" clicksCount="852" 
+//                showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
+//                salesCount="10" circleColor="#00B355"/>;
+            this.setState({
+                tableRow1: (
+                    ''
+                ),
+                tableRow2: ''
+            },
+            console.log(this.state)             
+            );
+
+          break;
+              
+          
+              
+      }
+    }
+    
+  componentDidUpdate(prevProps){
+      let tableRow1, tableRow2;  
+      
+        if(this.props != prevProps){
+            //this.removeAllTableCells();
+        this.checkTableTitle();
+         
+        }
+    }
     
     
   render() {
       const {tableTitle} = this.props;
       
+      
+      
+      
+
     return(
         
         
@@ -59,9 +188,7 @@ export default class Table extends Component {
         </div>
         
         
-        <TableRow serviceTitle="Yandex" serviceTitleDesc="Yandex letai-266319-enc0" clicksCount="852" 
-        showsCount="8520" conversionPriceCount="1025 ₽" priceCount="102500" conversionCount="100"
-        salesCount="10" circleColor="#00B355"/>
+        {this.state.tableRow1}
         
         
         
@@ -100,9 +227,7 @@ export default class Table extends Component {
         
         
         
-        <TableRow serviceTitle="GoogleAds" serviceTitleDesc="146-362-7099" clicksCount="900" 
-        showsCount="18000" conversionPriceCount="931 ₽" priceCount="186200" conversionCount="200"
-        salesCount="40" circleColor="#f00"/>
+        {this.state.tableRow2}
         
         
         

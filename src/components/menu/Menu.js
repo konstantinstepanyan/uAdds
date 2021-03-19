@@ -18,7 +18,7 @@ export default class Menu extends Component {
             <span data-id="item_companies" className="menu__item">Компании</span>
             <span data-id="item_groups" className="menu__item">Группы</span>
             <span data-id="item_keywords" className="menu__item">Ключевые слова</span>
-            <span data-id="item_ads" className="menu__item">Объявления </span>
+            <span data-id="item_ads" className="menu__item">Объявления</span>
         </div>
     </div>
         

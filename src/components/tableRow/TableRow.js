@@ -5,39 +5,51 @@ export default class TableRow extends Component {
   constructor(props) {
       super(props);
       
-     
+      this.state = {hide: this.props.hide, tableTitle: this.props.tableTitle}
+      
+      
   }
     
-    
-  componentDidMount(){
-      const unwantedDivs = document.querySelectorAll('.unwanted');
-      
-
-      
-      for(let i of unwantedDivs){
-
-          //unwantedDIV = i
-          const unwantedDivChildrenCount = parseInt(i.childNodes.length, 10);
-
+  removeAllTableCells(){
+        let allTableCells = document.querySelectorAll(':not(.unwanted) > .table__cell');
           
-          for (var z = 0; z < unwantedDivChildrenCount; z++) {
-              i.before(i.firstChild);
-          }
-            i.remove();   
+          allTableCells.forEach((item, index)=>{
+                item.remove() 
+              });
       }
+    
+
+    
+  componentDidUpdate(prevProps){
+
       
+
+    if (this.props== prevProps && this.props.tableTitle=='') {
+            this.setState({hide: true}, () => {
+                    console.log('didUpdate this.state.hide:')
+                    console.log(this.state.hide)
+
+            })
+    }
+      
+
   }
     
   render() {      
-     const {circleColor, serviceTitle, serviceTitleDesc, 
+     const {circleColor, hide,
+            serviceTitle, serviceTitleDesc, 
             clicksCount, showsCount, 
             conversionPriceCount, priceCount, 
             conversionCount, salesCount} = this.props;
       
+      
+      
+      
+      
     return(
         
-        <div className="unwanted">
-            <div className="table__item service-title yandex border-top_grey">
+        <>
+            <div className='table__item table__cell service-title border-top_grey'>
                     <div className="content-container">
                         <svg className="table__circle" xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
                             <circle cx="9.5" cy="9.57959" r="9.5" fill={circleColor}/>
@@ -47,30 +59,30 @@ export default class TableRow extends Component {
                     </div>
                 </div>
 
-                <div className="table__item clicks-count border-top_grey">
+                <div className="table__item table__cell clicks-count border-top_grey">
                     <span className="table__p">{clicksCount}</span>
                 </div>
 
-                <div className="table__item shows-count border-top_grey">
+                <div className="table__item table__cell shows-count border-top_grey">
                     <span className="table__p">{showsCount}</span>
                 </div>
 
-                <div className="table__item conversion-price-count border-top_grey">
+                <div className="table__item table__cell conversion-price-count border-top_grey">
                     <span className="table__p">{conversionPriceCount}</span>
                 </div>
 
-                <div className="table__item price-count border-top_grey">
+                <div className="table__item table__cell price-count border-top_grey">
                     <span className="table__p">{priceCount}</span>
                 </div>
 
-                <div className="table__item conversion-count border-top_grey">
+                <div className="table__item table__cell conversion-count border-top_grey">
                     <span className="table__p">{conversionCount}</span>
                 </div>
 
-                <div className="table__item sales-count border-top_grey">
+                <div className="table__item table__cell sales-count border-top_grey">
                     <span className="table__p">{salesCount}</span>
                 </div>
-        </div>
+        </>
         
     )
   }

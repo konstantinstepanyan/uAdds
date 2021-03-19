@@ -37,12 +37,12 @@ export default class App extends Component {
       
       for (let i of this.state.menuItems){
           i.classList.remove('item_active');
+
           if(i.getAttribute('data-id') == selectedMenuItem){
+              
               this.setState({
                   activeMenuItem: selectedMenuItem,
                   headerTitle: i.textContent
-              }, () => {
-                  console.log(`this.state.activeMenuItem: ${this.state.activeMenuItem}; this.state.headerTitle: ${this.state.headerTitle}`)
               });
               i.classList.add('item_active');
           }
@@ -64,7 +64,7 @@ export default class App extends Component {
           header = <TableHeader headerTitle={this.state.headerTitle}/>
           dealingsHeader = '';
           dealings = '';
-          table = <Table tableTitle={this.state.headerTitle}/>;
+          table = <Table tableTitle={this.state.headerTitle} activeMenuItem={this.state.activeMenuItem} />;
       }
       
           return (
