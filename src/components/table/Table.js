@@ -177,63 +177,42 @@ export default class Table extends Component {
   }
     
   pasteTableArticlesTwins(){
-      
- 
-      
       const table = document.querySelector('.table'),
             tableArticles = document.querySelectorAll('.table__article');
-      
-      //const gridAreas = window.getComputedStyle(table).gridTemplateAreas;
       const gridAreas = ['sources auto', 'clicks auto', 'shows auto', 'conversion-price auto', 'price auto', 'conversion auto', 'sales auto'];
       
-
-     
-      let newGridAreas;
+      let newGridAreas = gridAreas;
       
       for(let z = 1; z <= this.state.rowsCount; z++){
-          //z = rowsCount
-          
-            
-          
+
           const arr = gridAreas.map((i) => 
          { 
-              return i.replace(/\s+/, `_twin_${z-1} `)
+              if(!i.includes('twin')){
+                  return i.replace(/\s+/, `_twin_${z-1} `)
+              }
          
          });
           
-          newGridAreas = gridAreas.concat(arr);
-          
-          
+          try{
+              arr.forEach((itm)=>{
+              if(!itm.includes('0') ){
+                  console.log(itm)
+                  newGridAreas.push(itm)
+              }
+          });
+
+          }
+        catch{}
+            
           
           if(this.state.rowsCount === 1){
-              alert(`if this.state.rowsCount===1 `)
               newGridAreas = '';
               newGridAreas = ['sources auto', 'clicks auto', 'shows auto', 'conversion-price auto', 'price auto', 'conversion auto', 'sales auto'];
           }
           
           console.log(newGridAreas)
-
-//
-//        
-//
-//          tableArticles.forEach((item, index) => {
-//          const articleClone = item.cloneNode(true);
-//          
-//          const dataId = articleClone.getAttribute('data-id');
-//          
-//          
-//          articleClone.setAttribute('data-id', `${dataId}_twin_${z}`);
-//          articleClone.classList.add(`${dataId}_twin_${z}`);
-//          
-//         table.prepend(articleClone);
-//              
-//      });
-          
-          
       }
-      
-      
-  }
+}
     
     
   render() {
