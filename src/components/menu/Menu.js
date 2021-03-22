@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/menu.css';
+import menuToggler from './js/menuToggler.js';
 
 export default class Menu extends Component {
 

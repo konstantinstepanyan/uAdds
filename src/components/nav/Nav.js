@@ -6,7 +6,10 @@ export default class Nav extends Component {
   render() {
     return(
       <nav className="nav">
-            <span className="logo">uMark.it — uAdds</span>
+            <div className="logo">
+                <span>uMark.it </span>
+                <span>— uAdds</span>
+            </div>
             <div className="data-range-wrapper">
             <span className="data-range">Диапазон дат </span>
             <span className="data">

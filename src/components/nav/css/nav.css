@@ -9,21 +9,34 @@
     font-size: 1.5rem;
 }
 
-.data-range{
+.data-range {
     color: #A2A2A2;
 }
 
-.data{
+.data {
     color: #fff;
     border-bottom: 1px solid #A2A2A2;
 }
 
-.data__img{
+.data__img {
     margin: 0 5px;
 }
 
-@media screen and (max-width: 650px){
-    .nav{
+@media screen and (max-width: 650px) {
+    .nav {
         font-size: 1.35rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .nav .data-range-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .nav .logo {
+        display: flex;
+        flex-direction: column;
     }
 }

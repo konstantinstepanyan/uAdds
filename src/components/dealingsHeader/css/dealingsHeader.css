@@ -181,4 +181,45 @@
 		 max-height: 12px;
 	}
 }
+
+@media screen and (max-width: 300px){
+    .dealings-header{
+        width: 88%;
+    }
+    .dealings-header .filter{
+        width: 60px;
+        justify-content: space-between;
+        justify-self: end;
+        width: 64%;
+    }
+    
+    .dealings-header .dealings{
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+        animation: center;
+        grid-row-gap: 3px;
+    }
+    
+    .dealings-header .btn{
+        max-width: 20px;
+        padding: 0;
+    }
+    
+    .dealings-header .new-deal-wrapper{
+            width: 90px;
+    }
+    
+    .dealings-header .new-deal-wrapper .btn_new-deal, .dealings-header .settings-wrapper .btn_settings{
+        width: inherit;
+        max-width: initial;
+    }
+    
+    .dealings-header .settings-wrapper {
+            width: 40px
+    }
+    
+
+    
+}
  

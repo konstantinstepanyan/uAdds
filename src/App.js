@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import arrow from './assets/img/arrow.svg';
 import './App.css';
 import Nav from './components/nav/Nav';
 import Menu from './components/menu/Menu';
@@ -77,7 +78,12 @@ export default class App extends Component {
               <Nav />
 
               <main className="content-wrapper"> 
-                    <Menu />
+                <div className="menu-toggler">
+                    <img className="menu-toggler__img" src={arrow}/>
+                </div>
+                
+                <Menu />
+                
                 <div className="options-wrapper">
               
                     {header}
