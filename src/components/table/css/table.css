@@ -167,8 +167,7 @@
 /* ipad = 768px, поэтому надо брать чуть больше, чтоб текст не вылезал за границы таблицы (особенно service-title)*/
 @media screen and (max-width: 810px) {
     .table {
-        grid-template-areas:
-            'sources auto'
+        /*  'sources auto'
             'clicks auto'
             'shows auto'
             'conversion-price auto'
@@ -181,7 +180,17 @@
             'conversion-price_twin_1 auto'
             'price_twin_1 auto'
             'conversion_twin_1 auto'
-            'sales_twin_1 auto';
+            'sales_twin_1 auto'
+       */
+        
+        grid-template-areas:
+            'sources auto'
+            'clicks auto'
+            'shows auto'
+            'conversion-price auto'
+            'price auto'
+            'conversion auto'
+            'sales auto';
         grid-template-columns: 1fr 1fr;
 
 
