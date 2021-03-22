@@ -70,7 +70,6 @@ export default class App extends Component {
           dealings = '';
           table = <Table tableTitle={this.state.headerTitle} activeMenuItem={this.state.activeMenuItem} />;
       }
-      console.log(this.state.headerTitle);
       
       
           return (

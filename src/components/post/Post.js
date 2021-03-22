@@ -6,21 +6,47 @@ import instagramLogo from './img/instagram_logo.svg';
 
 export default class Post extends Component{
     
+  constructor(props) {
+      super(props); 
+      this.state = {logo: ''};
+            
+  }
+    
+    componentDidMount(){
+        let {socialNetwork} = this.props;
+        
+        switch(socialNetwork){
+            case('Telegram'):
+                this.setState({logo: telegramLogo})
+            break
+            case('Instagram'):
+                this.setState({logo: instagramLogo})
+            break
+        }
+    }
+
     
     render() {
+        let {socialNetwork, currentData, nickname,
+            comment, linkHref} = this.props;
+        
+       
+        
+        
+        
         return(
             <div className="post dealings__item">
                 <img className="post__user-avatar" src={avatarImg} />
-                <span className="post__social-network-title color_light-grey">Telegram channel</span>
-                <span className="post__current-data">Сегодня в 13:20</span>
-                <span className="post__user-name color_blue">Telegram Nickname</span>
+                <span className="post__social-network-title color_light-grey">{socialNetwork} channel</span>
+                <span className="post__current-data">{currentData}</span>
+                <span className="post__user-name color_blue">{socialNetwork} {nickname}</span>
                 <div className="post__comment"> 
                     <img className="post__user-avatar post__user-avatar_minify" src={avatarImg} />
-                    <span className="post__comment-text">Можно сделать заказ на...</span>
+                    <span className="post__comment-text">{comment}</span>
                 </div>
             
-                <a className="post__share post__share_telegram" href="https://web.telegram.org/#/im">
-                    <img className="post__img img_telegram" src={telegramLogo} />
+                <a className="post__share post__share_telegram" href={linkHref}>
+                    <img className="post__img" src={this.state.logo} />
                 </a>
             </div>
         )

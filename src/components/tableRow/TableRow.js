@@ -16,8 +16,7 @@ export default class TableRow extends Component {
   componentDidUpdate(prevProps){
 
     if (this.props !== prevProps ) {
-        console.log('DidUpdate this.props:');
-        console.log(this.props);
+
     }
       
   }
@@ -30,8 +29,6 @@ export default class TableRow extends Component {
             conversionPriceCount, priceCount, 
             conversionCount, salesCount} = this.props;
       
-      console.log('Render this.props:');
-      console.log(this.props);
       
       
       
