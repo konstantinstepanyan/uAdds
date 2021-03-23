@@ -22,7 +22,7 @@ class MenuToggler {
         init() {
 
             this.menuTrigger.addEventListener('click', this.toggle.bind(this));
-            this.menuTrigger.addEventListener('touchstart', this.toggle.bind(this));
+           
             
             if (this.type == 'appear') {
                 // add first styles, makes elem invisible and untouchuble
