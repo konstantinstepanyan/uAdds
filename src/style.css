@@ -110,6 +110,10 @@ code {
     transform: rotate(180deg);
 }
 
+.twin{
+    display: none !important;
+}
+
 @media screen and (max-width: 450px) {
 
     .menu-toggler {
@@ -125,4 +129,8 @@ code {
         grid-template-columns: 1fr;
         max-width: 100%;
     }
+    
+    .twin{
+    display: grid !important;
+}
 }

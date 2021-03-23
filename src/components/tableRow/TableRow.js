@@ -11,16 +11,6 @@ export default class TableRow extends Component {
   }
 
     
-
-    
-  componentDidUpdate(prevProps){
-
-    if (this.props !== prevProps ) {
-
-    }
-      
-  }
-    
   render() {  
       
      const {circleColor,
@@ -29,12 +19,7 @@ export default class TableRow extends Component {
             conversionPriceCount, priceCount, 
             conversionCount, salesCount} = this.props;
       
-      
-      
-      
-      
     return(
-        
         <>
             <div className='table__item table__cell service-title border-top_grey'>
                     <div className="content-container">
