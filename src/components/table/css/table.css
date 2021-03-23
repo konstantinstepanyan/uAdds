@@ -73,7 +73,7 @@
 
 .table .img_arrow {
     position: absolute;
-    top: 2px;
+    top: -1px;
     right: -30%;
     max-width: 14px;
 }
