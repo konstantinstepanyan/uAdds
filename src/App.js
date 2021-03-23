@@ -206,10 +206,7 @@ export default class App extends Component {
       
     }
     
-  pasteTableArticlesTwins(){
-      //alert('pasteTableArticlesTwins')
-      
-      
+  pasteTableArticlesTwins(){      
       const table = document.querySelector('.table'),
             tableArticles = document.querySelectorAll('.table__article:not(.twin)');
       const gridAreas = ["'sources auto'", "'clicks auto'", "'shows auto'", "'conversion-price auto'", "'price auto'", "'conversion auto'", "'sales auto'"];
@@ -302,11 +299,6 @@ export default class App extends Component {
            console.log(`tech: ${tech}`)
            
            tableArticles.forEach((item, index) => {
-            
-          
-            
-            
-
           
             if(currentZ!=1){
                 const dataId = item.getAttribute('data-id');
@@ -314,11 +306,8 @@ export default class App extends Component {
                 
                 tableArticleClone.setAttribute('data-id', `${dataId}_twin_${currentZ-tech}`);
                 tableArticleClone.classList.add('twin', `${dataId}_twin_${currentZ-tech}`);
-                 
-//                console.log( tableArticleClone)
-                
-//                tableArticleClone.style.gridArea = 'none';
-//                tableArticleClone.style.gridArea = `${dataId}_twin_${currentZ-tech}`;
+
+                //tableArticleClone.style.gridArea = `${dataId}_twin_${currentZ-tech}`;
                 
                  table.prepend(tableArticleClone);   
                
@@ -328,15 +317,16 @@ export default class App extends Component {
            
             
        }
-       
+                  
+      
        const tableArticlesClones = document.querySelectorAll('.twin');
       
        tableArticlesClones.forEach((item, index) => {
            const dataId = item.getAttribute('data-id');
            
-           console.log('clone:');
-           console.log(item);
-//           item.style.gridArea = dataId; потом пофиксить
+            item.setAttribute('style', `grid-area: ${dataId} !important`)
+           //свойство grid-area лучше устанавливать инлайново через атрибут. По-другом работает некорректно
+
        });
       
      

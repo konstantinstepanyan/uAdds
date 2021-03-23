@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './css/table.css';
-import './css/twins.css';
 import arrowDown from './img/arrow.svg';
 import TableRow from '../tableRow/TableRow.js';
 
