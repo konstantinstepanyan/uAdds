@@ -62,6 +62,9 @@ export default class App extends Component {
               i.addEventListener('click', () => {
                   this.toggleMenuItem(i.getAttribute('data-id'))
               });
+              i.addEventListener('touchstart', () => {
+                  this.toggleMenuItem(i.getAttribute('data-id'))
+              });
           }
       });
       
