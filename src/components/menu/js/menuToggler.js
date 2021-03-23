@@ -11,6 +11,7 @@ class MenuToggler {
             
             
             this.menuTrigger = document.querySelector(`${this.menuTriggerSelector}`);
+            this.menuFirstTrigger = document.querySelector(`.menu-toggler`);
             this.menu = document.querySelector(`${this.menuSelector}`);
             this.isChanging = false;
             this.state = 'hide';
@@ -79,7 +80,7 @@ class MenuToggler {
                 if (this.menu.style.opacity == '1') {
                     this.setVendorStyleProperty(this.menu, 'transition', `opacity ${this.transitionTime} ${this.transitionType}`);
 
-                    if (this.menuTrigger.classList.contains(this.menuTriggerSelector)) {
+                    if (this.menuTrigger.classList.contains(this.menuTriggerSelector.slice(1))) {
                         this.menuTrigger.classList.remove('close');
                     }
 
@@ -92,7 +93,7 @@ class MenuToggler {
                 if (this.menu.style.opacity == '0') {
 
                     
-                    if (this.menuTrigger.classList.contains(this.menuTriggerSelector)) {
+                    if (this.menuTrigger.classList.contains(this.menuTriggerSelector.slice(1))) {
                         this.menuTrigger.classList.add('close');
                     }
                     
@@ -114,16 +115,16 @@ class MenuToggler {
                 
                 
                 if(this.menu.style.transform == this.slideBegin){
-                    if (this.menuTrigger.classList.contains('menu-toggler')) {
-                        this.menuTrigger.classList.add('close');
+                    if (this.menuTrigger.classList.contains(this.menuTriggerSelector.slice(1))) {
+                        this.menuFirstTrigger.classList.add('close');
                     }
                     
                     this.setVendorStyleProperty(this.menu, 'transform', this.slideEnd);
                     
                 }
                 else{
-                    if (this.menuTrigger.classList.contains('menu-toggler')) {
-                        this.menuTrigger.classList.remove('close');
+                    if (this.menuTrigger.classList.contains(this.menuTriggerSelector.slice(1))) {
+                        this.menuFirstTrigger.classList.remove('close');
                     }
                     
                      this.setVendorStyleProperty(this.menu, 'transform', this.slideBegin);
@@ -137,6 +138,7 @@ class MenuToggler {
 document.addEventListener('DOMContentLoaded', () => {
 
     const initToggler = () => {
+        
             const menuToggler1 = new MenuToggler({
             menuTriggerSelector: '.menu-toggler', //if burger, to onClick add class burger_close
             menuSelector: '.menu-wrapper',
@@ -146,6 +148,28 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'slide', //appear by default
             slideBegin: 'translate(-200%, 0px)', // Обязательно добавлять px к любому числу
             slideEnd: 'translate(0px, 0px)', // Обязательно добавлять px к любому числу
+        });
+        
+        const allMenuItems = document.querySelectorAll('.menu__item');
+        
+        allMenuItems.forEach((item, index) => {
+            
+            const dataId = item.getAttribute('data-id');
+            
+            try{
+                const menuToggler2 = new MenuToggler({
+                    menuTriggerSelector: `.${dataId}`,
+                    menuSelector: '.menu-wrapper',
+                    transitionTime: '.5s',
+                    transitionType: 'linear',
+                    menuDisplay: 'grid',
+                    type: 'slide', //appear by default
+                    slideBegin: 'translate(-200%, 0px)', // Обязательно добавлять px к любому числу
+                    slideEnd: 'translate(0px, 0px)', // Обязательно добавлять px к любому числу
+                })
+            }          
+            catch{}
+
         });
     }
     
