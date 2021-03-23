@@ -127,7 +127,7 @@
             'conversion_twin_1 auto'
             'sales_twin_1 auto'
        */
-        
+
         grid-template-areas:
             'sources auto'
             'clicks auto'
@@ -183,7 +183,13 @@
     }
 
     .table .service-title .content-container {
-        width: 90% !important;
+        width: fit-content !important;
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .table .img_arrow {
+        right: -20px;
     }
 }
