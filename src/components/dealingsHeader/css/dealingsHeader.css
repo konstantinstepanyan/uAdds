@@ -37,6 +37,8 @@
 }
  .filter .btn {
 	 height: 29px;
+     justify-content: center;
+     align-items: center;
 }
  .search-wrapper {
 	 display: flex;
@@ -173,7 +175,7 @@
 		 display: none;
 	}
 }
- @media screen and (max-width: 450px) {
+ @media screen and (max-width: 500px) {
 	 .btn_download, .btn_columns {
 		 height: 29px;
 	}

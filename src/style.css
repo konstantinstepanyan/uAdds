@@ -114,7 +114,7 @@ code {
     display: none !important;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
 
     .menu-toggler {
         display: block

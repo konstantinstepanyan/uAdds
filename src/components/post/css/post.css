@@ -55,6 +55,9 @@
     justify-self: end;
 }
 
+.dealings_rows .post .post__comment .post__comment-text {
+    margin-left: 4px;
+}
 
 @media screen and (max-width: 1300px) {
 

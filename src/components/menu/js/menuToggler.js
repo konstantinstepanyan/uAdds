@@ -173,13 +173,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    if(window.innerWidth <= 450){
+    if(window.innerWidth <= 500){
 
         initToggler();
     }
     
     window.addEventListener('resize', () => {
-        if(window.innerWidth <= 450){
+        if(window.innerWidth <= 500){
             initToggler();
         }
     })

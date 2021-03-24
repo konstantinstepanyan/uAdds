@@ -15,11 +15,13 @@ export default class App extends Component {
     
   constructor(props){
       super(props);
+
       this.state = {
           rows: '',
           rowsCount: 2,
           activeMenuItem: 'item_sources',
           headerTitle: 'Источники'};
+      
         
         this.checkTableTitle();
   }    
@@ -38,7 +40,6 @@ export default class App extends Component {
         if(
            this.state.rowsCount != prevState.rowsCount
           ){
-            console.log('compDidUpdate')
             this.countRows();
             setTimeout(() => {this.pasteTableArticlesTwins()}, 1)
         }
@@ -50,8 +51,6 @@ export default class App extends Component {
         this.countRows();
         setTimeout(() => {this.pasteTableArticlesTwins()}, 1);
       
-        console.log('App componentDidMount')
-        //с таблицей всё делать из этого компонентац3й
         
       this.setState({
           menuItems: document.querySelectorAll('.menu__item')
@@ -83,7 +82,7 @@ export default class App extends Component {
         this.setState({
                 rowsCount: counter
             }, () => {
-            console.log(this.state.rowsCount)
+            //console.log(this.state.rowsCount)
             //this.pasteTableArticlesTwins();
         });  
     }
@@ -248,14 +247,14 @@ export default class App extends Component {
           
           const stringNewGridAreas = newGridAreas.join().replace(/[.,%]/g, '');
       
-          console.log('newGridAreas string:');
-          console.log(stringNewGridAreas);
+//          console.log('newGridAreas string:');
+//          console.log(stringNewGridAreas);
 
-          if(window.innerWidth <= 450){
+          if(window.innerWidth <= 500){
                try{table.style.gridTemplateAreas = `${stringNewGridAreas}`;}
           catch{}
           }
-              if(window.innerWidth >= 450){
+              if(window.innerWidth >= 500){
                   try{table.style.gridTemplateAreas = `${gridAreas.join()}`;}
           catch{}
               }
@@ -296,7 +295,7 @@ export default class App extends Component {
            
            tech++;
            
-           console.log(`tech: ${tech}`)
+//           console.log(`tech: ${tech}`)
            
            tableArticles.forEach((item, index) => {
           

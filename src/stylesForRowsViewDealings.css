@@ -1,0 +1,22 @@
+.dealings_rows .dealings__article {
+    grid-template-columns: 1fr 4fr;
+}
+
+.dealings_rows .items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-column-gap: 15px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.dealings_rows .dealings__item{
+    margin: 0;
+    grid-template-columns: 0.03fr 2.7fr 0.7fr 0.2fr;
+    grid-template-areas:
+        'user-avatar social-network-title current-data current-data'
+        'user-avatar user-name . .'
+        '. comment comment share';
+    width: 92%;
+}

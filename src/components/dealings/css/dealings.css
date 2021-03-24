@@ -38,8 +38,68 @@
     border-top: 5px solid #2f9200;
 }
 
+
+
+.dealings_rows {
+    grid-template-areas:
+        'dealings__article_unparsed'
+        'dealings__article_wip'
+        'dealings__article_assembly'
+        'dealings__article_realized';
+    grid-template-columns: 1fr;
+    max-width: 95%;
+}
+
+.dealings_rows .dealings__article {
+    display: grid;
+    grid-template-columns: minmax(150px, 1fr) 4fr;
+    border: none;
+    border-left: 5px solid #9a9a9a;
+}
+
+.dealings_rows .dealings__article_unparsed {
+    grid-area: dealings__article_unparsed;
+}
+
+.dealings_rows .dealings__article_wip {
+    grid-area: dealings__article_wip;
+}
+
+.dealings_rows .dealings__article_assembly {
+    grid-area: dealings__article_assembly;
+}
+
+.dealings_rows .dealings__article_realized {
+    grid-area: dealings__article_realized;
+}
+
+.dealings_rows .items-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.dealings_rows .dealings__item{
+    margin: 0;
+    grid-template-columns: 0.03fr 5fr 0.7fr 0.2fr;
+    grid-template-areas:
+        'user-avatar social-network-title current-data current-data'
+        'user-avatar user-name . .'
+        '. comment comment share';
+    width: 88%;
+}
+
+
+
 @media screen and (max-width: 1300px) {
     .dealings {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .dealings_rows .items-wrapper{
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 }
